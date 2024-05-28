@@ -1,0 +1,130 @@
+/* Reset CSS */
+* {
+    margin: 5px;
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+}
+
+header {
+    background-color: blueviolet;
+    color: #f8f9fa;
+    padding: 15px;
+    text-align: center;
+}
+.logo {
+    width: 200px; 
+    height: auto; 
+    margin-right: 10px;
+    vertical-align: left;
+}
+div nav {
+    background-color: whitesmoke ;
+    padding: 10px 0; /* Ruang di atas dan bawah navigasi */
+}
+
+div nav ul {
+    list-style-type: none; /* Menghapus tanda bulet pada daftar */
+    padding: 0; /* Menghapus padding default */
+    margin: 0; /* Menghapus margin default */
+    text-align: right; /* Posisi teks ke tengah */
+}
+
+nav ul li {
+    display: inline; /* Membuat daftar berjajar horizontal */
+    margin-right: 10px; /* Jarak antara setiap item daftar */
+}
+
+nav ul li a {
+    text-decoration: none; /* Menghapus garis bawah pada tautan */
+    color: #000; /* Warna teks tautan */
+    padding: 5px 10px; /* Ruang di atas dan bawah, serta kanan dan kiri pada tautan */
+}
+
+nav ul li a:hover {
+    background-color: #ddd; /* Warna latar belakang saat tautan dihover */
+    border-radius: 5px; /* Membuat sudut melengkung */
+}
+
+
+main {
+    padding: 20px;
+}
+
+article {
+    margin-bottom: 10px; /* Memberikan ruang antara artikel */
+    padding: 10px; /* Padding di dalam artikel */
+    background-color:white ; /* Warna latar belakang artikel */
+    border-radius: 4px; /* Sudut bulatan sudut artikel */
+}
+
+article h2 {
+    font-size: 24px; 
+    color:#000;
+    margin-bottom: 0%; 
+}
+
+article div nav {
+    background-color: white;
+    list-style-type: disc;
+}
+
+article div nav ul li {
+    list-style-type: none;
+    display: flex;
+    padding: 5px;
+}
+
+article div nav ul {
+    list-style-type: none; /* Menghilangkan bullets default */
+    counter-reset: my-counter; /* Setel ulang counter */
+    text-align: left;
+    padding-bottom: 10px;
+}
+
+article div nav ul li::before {
+    content: counter(my-counter) ". "; /* Menambahkan nomor urutan */
+    counter-increment: my-counter; /* Menambahkan satu ke counter */
+}
+
+article nav ul {
+    padding: 15px;
+}
+
+article nav p {
+    font-size: 20px;
+}
+
+.tebal {
+    font-weight: bold;
+}
+
+.title {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif; /* Ganti "Nama Font" dengan nama font yang Anda inginkan */
+  }
+
+footer {
+    background-color: rgb(29, 29, 190);
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+}
+/* Responsiveness */
+@media screen and (max-width: 768px) {
+    nav ul {
+        display: block;
+        text-align: left;
+    }
+    
+    nav ul li {
+        display: block;
+        margin-bottom: 10px;
+    }
+    
+    nav ul li:last-child {
+        margin-bottom: 0;
+    }
+}
